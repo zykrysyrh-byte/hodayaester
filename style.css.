@@ -1,7 +1,7 @@
 :root {
-    --deep-green: #1b3022; /* ירוק בקבוק סמכותי */
-    --gold: #c5a059;       /* זהב חם ויוקרתי */
-    --pearl: #fdfaf7;      /* לבן פנינה מאוורר */
+    --deep-green: #1b3022;
+    --gold: #c5a059;
+    --pearl: #fdfaf7;
     --text: #2c2c2c;
 }
 
@@ -13,7 +13,6 @@ body {
     line-height: 1.8;
 }
 
-/* רקע הנדסה רוחנית - קווים גיאומטריים עדינים */
 .bg-pattern {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -32,7 +31,7 @@ header {
 }
 
 h1, h2 {
-    font-family: 'Playfair Display', serif; /* פונט סריפי יוקרתי */
+    font-family: 'Playfair Display', serif;
 }
 
 .hero-section {
@@ -43,6 +42,17 @@ h1, h2 {
     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
     border-top: 4px solid var(--gold);
     text-align: center;
+    /* הוספת מיקום לתמונה */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* עיצוב התמונה */
+.profile-img {
+    width: 200px; /* הגדרת גודל לתמונה */
+    height: auto;
+    margin-bottom: 25px; /* מרווח מתחת לתמונה */
 }
 
 .grid {
