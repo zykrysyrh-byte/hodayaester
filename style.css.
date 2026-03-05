@@ -1,0 +1,113 @@
+:root {
+    --deep-green: #1b3022; /* ירוק בקבוק סמכותי */
+    --gold: #c5a059;       /* זהב חם ויוקרתי */
+    --pearl: #fdfaf7;      /* לבן פנינה מאוורר */
+    --text: #2c2c2c;
+}
+
+body {
+    font-family: 'Assistant', sans-serif;
+    background-color: var(--pearl);
+    color: var(--text);
+    margin: 0;
+    line-height: 1.8;
+}
+
+/* רקע הנדסה רוחנית - קווים גיאומטריים עדינים */
+.bg-pattern {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: linear-gradient(rgba(212, 175, 89, 0.03) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(212, 175, 89, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: -1;
+}
+
+header {
+    background-color: var(--deep-green);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    border-bottom: 5px solid var(--gold);
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif; /* פונט סריפי יוקרתי */
+}
+
+.hero-section {
+    max-width: 900px;
+    margin: -50px auto 50px;
+    background: white;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    border-top: 4px solid var(--gold);
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border: 1px solid #eee;
+    transition: 0.3s;
+    text-align: center;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+}
+
+.card h3 { color: var(--deep-green); }
+
+.price {
+    font-size: 1.6em;
+    color: var(--gold);
+    font-weight: bold;
+    display: block;
+    margin: 15px 0;
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background: #25d366;
+    color: white;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    text-decoration: none;
+}
+
+.main-btn {
+    background: var(--deep-green);
+    color: white;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid var(--deep-green);
+    transition: 0.3s;
+}
+
+.main-btn:hover {
+    background: transparent;
+    color: var(--deep-green);
+}
+
+footer { text-align: center; padding: 50px; opacity: 0.6; }
