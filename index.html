@@ -4,218 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>הודיה אסתר זכרי| תקשור| מסרים| נורמולוגיה</title>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --deep-green: #1b3022;
-            --gold: #d4af37;
-            --pearl: #fcfaf7;
-            --text-dark: #2c2c2c;
-        }
-
-        body { 
-            font-family: 'Assistant', sans-serif; 
-            margin: 0; 
-            background-color: var(--pearl); 
-            color: var(--text-dark); 
-            line-height: 1.8;
-            overflow-x: hidden;
-        }
-
-        /* רקע גיאומטרי עדין */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-image: radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
-                              linear-gradient(45deg, transparent 48%, rgba(27, 48, 34, 0.02) 50%, transparent 52%);
-            background-size: 100% 100%, 60px 60px;
-            z-index: -1;
-        }
-
-        header { 
-            background-color: var(--deep-green); 
-            color: white; 
-            padding: 100px 20px; 
-            text-align: center;
-            border-bottom: 4px solid var(--gold);
-        }
-
-        h1 { 
-            font-family: 'Playfair Display', serif; 
-            margin: 0; 
-            font-size: 3.5em; 
-            letter-spacing: 2px;
-        }
-
-        .subtitle { 
-            font-size: 1.4em; 
-            opacity: 0.9; 
-            margin-top: 15px; 
-            font-weight: 300;
-            letter-spacing: 1px;
-        }
-
-        .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
-
-        /* סעיף האודות המעוצב */
-        .hero-card {
-            background: white;
-            padding: 50px;
-            border-radius: 2px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-            margin-top: -80px;
-            border: 1px solid #eee;
-            position: relative;
-        }
-
-        .hero-card h2 { 
-            font-family: 'Playfair Display', serif; 
-            color: var(--deep-green);
-            font-size: 2.2em;
-        }
-
-        /* כרטיסיות שירותים */
-        .section-title { 
-            text-align: center; 
-            margin: 80px 0 40px; 
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5em;
-            color: var(--deep-green);
-        }
-
-        .grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 30px; 
-        }
-
-        .card { 
-            background: white; 
-            padding: 40px 30px; 
-            border-radius: 0; 
-            border: 1px solid #eee;
-            transition: 0.4s ease;
-            text-align: center;
-        }
-
-        .card:hover { 
-            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
-            border-color: var(--gold);
-        }
-
-        .card h3 { color: var(--deep-green); margin-top: 0; }
-
-        .price { 
-            display: block; 
-            font-size: 1.8em; 
-            color: var(--gold); 
-            font-weight: bold; 
-            margin: 20px 0;
-        }
-
-        /* כפתור וואטסאפ צף */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            left: 30px;
-            background-color: #25d366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-        .whatsapp-float:hover { transform: scale(1.1); }
-
-        .main-btn {
-            display: inline-block;
-            background-color: var(--deep-green);
-            color: white;
-            padding: 15px 40px;
-            text-decoration: none;
-            font-weight: bold;
-            letter-spacing: 1px;
-            transition: 0.3s;
-            border: 1px solid var(--deep-green);
-        }
-
-        .main-btn:hover {
-            background-color: transparent;
-            color: var(--deep-green);
-        }
-
-        footer { text-align: center; padding: 60px; opacity: 0.5; font-size: 0.8em; }
-    </style>
+ <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<div class="bg-pattern"></div>
+
 <header>
-    <h1>הודיה אסתר זכרי</h1>
-    <div class="subtitle">הנדסת נשמה • תקשור עמוק • נומרולוגיה</div>
+    <h1>הודיה דרעי</h1>
+    <p class="subtitle">הנדסת נשמה • תקשור עמוק • נומרולוגיה</p>
 </header>
 
-<div class="container">
-    <div class="hero-card">
-        <h2>אני כאן כדי לעזור לך להתקרב לעצמך</h2>
-        <p>לבטא את הקול שבך ואת מי שאת באמת. לתת ביטוי לשאלות שלך ולספק שלך.</p>
-        <p>העבודה שלי היא לא רק לתת לך מידע, אלא לפרק את ה"פלונטר" הרגשי או האנרגטי שבו את נמצאת, ולהעניק לך מפת דרכים ברורה לשינוי המציאות בבית, בזוגיות ובנפש.</p>
-        <p><strong>דיוק של מהנדסת, ראייה של מתקשרת.</strong></p>
-    </div>
+<div class="hero-section">
+    <img src="https://example.com/hodaya_image.png" alt="הודיה דרעי - הנדסת נשמה" class="profile-img">
+    
+    <h2>הודיה דרעי – הנדסת נשמה ותקשור עמוק</h2>
+    <p>מפצחת את החסימות, בונה את הדרך חזרה לעצמך.</p>
+    <p>אני כאן לעזור לך להתקרב לעצמך, לבטא את הקול שבך ואת מי שאת באמת. העבודה שלי היא לפרק את ה"פלונטר" הרגשי או האנרגטי שבו את נמצאת ולהעניק לך מפת דרכים ברורה לשינוי המציאות בבית, בזוגיות ובנפש.</p>
+</div>
 
-    <h2 class="section-title">בדיקות אבחוניות (מפות)</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>מפת שורש החסימה</h3>
-            <p>אבחון דינמיקה, זיהוי ה"שריון" מול ה"נשק" והכוונה פרקטית לשחרור התקיעות.</p>
-            <span class="price">144 ₪</span>
-        </div>
-        <div class="card">
-            <h3>אבחון וטיהור המרחב</h3>
-            <p>זיהוי עננות אנרגטיות בבית או בעסק ומתן כלים מדויקים לניקוי ופתיחת המזל.</p>
-            <span class="price">144 ₪</span>
-        </div>
-        <div class="card">
-            <h3>מפת פתיחת שערים</h3>
-            <p>זיהוי חסמים לזיווג חדש או שפע וקבלת מסר מכוון ומדויק מהנשמה.</p>
-            <span class="price">144 ₪</span>
-        </div>
+<h2 style="text-align: center; color: #1b3022;">אבחון אנרגטי ומפות תקשור (בכתב)</h2>
+<div class="grid">
+    <div class="card">
+        <h3>מפת שורש החסימה</h3>
+        <p>זיהוי ה"שריון" מול ה"נשק" והכוונה לשחרור התקיעות.</p>
+        <span class="price">144 ₪</span>
     </div>
-
-    <h2 class="section-title">שיחות ייעוץ</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>שיחת מיקוד טקטי</h3>
-            <p>15 דקות למענה על שאלות בוערות, קבלת החלטות מהירה ומסר מחזק.</p>
-            <span class="price">144 ₪</span>
-        </div>
-        <div class="card" style="border: 2px solid var(--gold);">
-            <div style="color: var(--gold); font-weight: bold; margin-bottom: 10px;">המסלול המומלץ</div>
-            <h3>שיחת עומק וליווי</h3>
-            <p>30 דקות של צלילה לסיטואציה, מענה לשאלות ותקשור חי לדיוק הצעדים שלך בביטחון.</p>
-            <span class="price">250 ₪</span>
-        </div>
-    </div>
-
-    <div style="text-align: center; margin-top: 60px;">
-        <a href="https://wa.me/972535575236" class="main-btn">קביעת תור לאבחון או שיחה</a>
+    <div class="card">
+        <h3>אבחון וטיהור המרחב</h3>
+        <p>זיהוי עננות אנרגטיות ומתן כלים לניקוי הבית/העסק.</p>
+        <span class="price">144 ₪</span>
     </div>
 </div>
 
-<a href="https://wa.me/972535575236" class="whatsapp-float" target="_blank">
-    <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+<h2 style="text-align: center; color: #1b3022;">שיחות תקשור וליווי (בשידור חי)</h2>
+<div class="grid">
+    <div class="card">
+        <h3>שיחת מיקוד טקטי</h3>
+        <p>15 דקות למענה על שאלות בוערות ומסר מחזק.</p>
+        <span class="price">144 ₪</span>
+    </div>
+    <div class="card" style="border: 2px solid #c5a059;">
+        <div style="background: #c5a059; color: white; font-size: 0.8em; padding: 2px; position: absolute; top: 0; right: 0; left: 0;">המסלול המומלץ</div>
+        <h3>שיחת עומק וליווי</h3>
+        <p>30 דקות של צלילה לסיטואציה ותקשור חי לדיוק הצעדים שלך.</p>
+        <span class="price">250 ₪</span>
+    </div>
+</div>
+
+<div style="text-align: center; margin: 50px;">
+    <a href="https://wa.me/972535575236" class="main-btn">לתיאום בדיקה או שיחה</a>
+</div>
+
+<a href="https://wa.me/972535575236" class="whatsapp-float">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="35">
 </a>
 
 <footer>
-    &copy; 2026 הודיה אסתר זכרי - הנדסת נשמה. כל הזכויות שמורות.
+    &copy; 2026 הודיה זכרי - הנדסת נשמה. כל הזכויות שמורות.
 </footer>
 
 </body>
