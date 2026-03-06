@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>הודיה זכרי | הנדסת נשמה ותקשור</title>
+    <title>הודיה זכרי | הנדסת נשמה</title>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Noto+Serif+Hebrew:wght@700&display=swap" rel="stylesheet">
     <style>
         :root {
             --navy: #1a2a44;
             --gold: #d4af37;
             --light-gold: #fcf8e8;
-            --concrete: #f4f4f4;
+            --concrete: #efeff1; /* אפור בטון בהיר ויוקרתי */
             --white: #ffffff;
             --text: #2c2c2c;
         }
@@ -18,6 +18,10 @@
         body {
             font-family: 'Assistant', sans-serif;
             background-color: var(--concrete);
+            /* דפוס רקע עדין מאוד של נקודות זהב */
+            background-image: radial-gradient(var(--gold) 0.5px, transparent 0.5px);
+            background-size: 40px 40px;
+            background-attachment: fixed;
             color: var(--text);
             margin: 0;
             padding: 0;
@@ -28,102 +32,91 @@
             background-color: var(--navy);
             color: white;
             text-align: center;
-            padding: 80px 20px 120px;
+            padding: 80px 20px 140px;
             border-bottom: 6px solid var(--gold);
+            position: relative;
         }
 
         header h1 {
             font-family: 'Noto Serif Hebrew', serif;
             font-size: 3.5em;
             margin: 0;
-            letter-spacing: 1px;
-        }
-
-        .subtitle {
-            font-size: 1.5em;
-            opacity: 0.9;
-            font-weight: 300;
-            margin-top: 10px;
         }
 
         .container {
-            max-width: 1000px;
-            margin: -80px auto 60px;
+            max-width: 900px;
+            margin: -90px auto 60px;
             padding: 0 20px;
+            position: relative;
+            z-index: 10;
         }
 
         .hero-card {
             background: var(--white);
-            padding: 50px;
-            border-radius: 4px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
             text-align: center;
             border-top: 5px solid var(--gold);
         }
 
-        .hero-card h2 {
-            font-family: 'Noto Serif Hebrew', serif;
-            color: var(--navy);
-            font-size: 2.2em;
+        .profile-img {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--white);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            margin-top: -120px;
             margin-bottom: 20px;
+            background-color: white;
         }
 
         .section-title {
             text-align: center;
-            margin: 80px 0 40px;
+            margin: 70px 0 30px;
             font-family: 'Noto Serif Hebrew', serif;
-            font-size: 2.5em;
+            font-size: 2.2em;
             color: var(--navy);
-        }
-
-        .services-stack {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
         }
 
         .service-card {
             background: white;
-            padding: 40px;
-            border-radius: 4px;
-            border-right: 8px solid var(--navy);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            padding: 35px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-right: 6px solid var(--navy);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             transition: 0.3s;
         }
 
         .service-card:hover {
-            transform: scale(1.01);
+            transform: translateY(-5px);
             border-right-color: var(--gold);
-        }
-
-        .service-card h3 {
-            font-family: 'Noto Serif Hebrew', serif;
-            color: var(--navy);
-            font-size: 1.8em;
-            margin-top: 0;
         }
 
         .highlight-box {
             background-color: var(--light-gold);
-            padding: 20px;
+            padding: 15px;
             border-radius: 4px;
-            margin: 20px 0;
+            margin: 15px 0;
             font-style: italic;
+            border-right: 3px solid var(--gold);
         }
 
         .price-tag {
-            font-size: 1.4em;
+            font-size: 1.3em;
             font-weight: bold;
             color: var(--navy);
             display: block;
-            margin-bottom: 20px;
+            margin: 15px 0;
         }
 
         .gold-btn {
             display: inline-block;
             background-color: var(--gold);
             color: var(--navy);
-            padding: 15px 30px;
+            padding: 12px 25px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 4px;
@@ -141,28 +134,26 @@
             bottom: 30px;
             left: 30px;
             background: #25d366;
-            width: 65px;
-            height: 65px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             z-index: 1000;
         }
 
         footer {
             text-align: center;
-            padding: 60px;
-            background: var(--navy);
-            color: white;
-            margin-top: 100px;
+            padding: 40px;
+            color: #777;
+            font-size: 0.9em;
         }
 
         @media (max-width: 600px) {
-            header h1 { font-size: 2.2em; }
-            .hero-card { padding: 30px 20px; }
-            .service-card { padding: 25px; }
+            header h1 { font-size: 2.5em; }
+            .container { margin-top: -60px; }
         }
     </style>
 </head>
@@ -175,79 +166,69 @@
 
 <div class="container">
     <div class="hero-card">
-        <h2>הודיה זכרי – הנדסת נשמה ותקשור עמוק</h2>
-        <p><strong>מפצחת את החסימות, בונה את הדרך חזרה לעצמך.</strong></p>
-        <p>אני כאן לעזור לך להתקרב לעצמך, לבטא את הקול שבך ואת מי שאת באמת. העבודה שלי היא לפרק את ה"פלונטר" הרגשי או האנרגטי שבו את נמצאת ולהעניק לך מפת דרכים ברורה לשינוי המציאות בבית, בזוגיות ובנפש.</p>
+        <img src="https://api.screenshot.com/v1/image/621674/image_305989.jpg" alt="הודיה זכרי" class="profile-img" onerror="this.src='https://via.placeholder.com/170'">
+        <h2>מפצחת את החסימות, בונה את הדרך חזרה לעצמך</h2>
+        <p>אני כאן לעזור לך להתקרב לעצמך, לבטא את הקול שבך ואת מי שאת באמת. העבודה שלי היא לפרק את ה"פלונטר" הרגשי או האנרגטי שבו את נמצאת.</p>
     </div>
 
     <h2 class="section-title">אבחונים ומפות תקשור (בכתב)</h2>
     
-    <div class="services-stack">
-        <div class="service-card">
-            <h3>1. מענה לשאלה ממוקדת (אבחון מקיף)</h3>
-            <div class="highlight-box">
-                "לפעמים את מרגישה שאת מסתובבת סביב אותה נקודה ולא מבינה למה הדברים לא זזים. בבדיקה הזו אני לא רק עונה לך 'כן' או 'לא', אלא מבצעת אבחון שורש."
-            </div>
-            <p>אני צוללת לעומק התדר, בודקת את הפוטנציאל האמיתי ומפרקת לך את המצב לגורמים. את מקבלת קובץ מפורט שבו אני מסבירה לך בדיוק על מה הסתכלתי ומה הצעד הבא שלך.</p>
-            <p><strong>התוצאה:</strong> שקט נפשי וידיעה ברורה לאן פנייך מועדות.</p>
-            <span class="price-tag">מחיר: 144 ₪ | זמן מענה: עד 3 ימי עסקים.</span>
-            <a href="https://wa.me/972535575236" class="gold-btn">אני רוצה את הבהירות הזו – להזמנה לחצי כאן</a>
+    <div class="service-card">
+        <h3>1. מענה לשאלה ממוקדת (אבחון מקיף)</h3>
+        <div class="highlight-box">
+            "בבדיקה הזו אני לא רק עונה לך 'כן' או 'לא', אלא מבצעת אבחון שורש."
         </div>
-
-        <div class="service-card">
-            <h3>2. מפת התאמה זוגית</h3>
-            <div class="highlight-box">
-                "זוגיות היא לא רק רגש, היא מפגש בין שתי נשמות שלכל אחת מהן יש תדר ושיעור. המפה הזו היא בשבילך אם את רוצה לדעת אם זה 'זה'."
-            </div>
-            <p>אני בודקת את החיבור האנרגטי ביניכם, מה מעכב אתכם ומהו השיעור המשותף שנועדתם לעבור יחד. במקום לנחש, אני נותנת לך את 'ספר ההדרכה' לקשר שלכם.</p>
-            <p><strong>התוצאה:</strong> הבנה עמוקה של הקשר ויכולת לגשת אליו ממקום של כוח.</p>
-            <span class="price-tag">מחיר: 144 ₪ | זמן מענה: עד 3 ימי עסקים.</span>
-            <a href="https://wa.me/972535575236" class="gold-btn">אני רוצה את הבהירות הזו – להזמנה לחצי כאן</a>
-        </div>
-
-        <div class="service-card">
-            <h3>3. מפה נומרולוגית אישית (תחזית שנתית)</h3>
-            <div class="highlight-box">
-                "למה להילחם בזרם כשאפשר לשחות איתו? הנומרולוגיה מגלה לנו שלכל חודש בשנה יש תדר משלו – זמן לזרוע וזמן לקצור."
-            </div>
-            <p>במפה האישית אני בונה לך תוכנית עבודה אנרגטית לשנה שלמה. נבין מה הפוטנציאל של כל חודש וחודש, מתי כדאי לעשות צעדים גדולים ומתי לשמור על הקיים.</p>
-            <p><strong>התוצאה:</strong> ביטחון בצעדים שלך ותכנון חכם ומדויק של העתיד.</p>
-            <span class="price-tag">מחיר: 222 ₪ | זמן מענה: עד 7 ימי עסקים.</span>
-            <a href="https://wa.me/972535575236" class="gold-btn">אני רוצה את הבהירות הזו – להזמנה לחצי כאן</a>
-        </div>
+        <p>אני צוללת לעומק התדר ומפרקת את המצב לגורמים. את מקבלת קובץ מפורט עם צעדים לביצוע.</p>
+        <span class="price-tag">מחיר: 144 ₪ | זמן מענה: עד 3 ימי עסקים</span>
+        <a href="https://wa.me/972535575236" class="gold-btn">אני רוצה את הבהירות הזו – להזמנה לחצי כאן</a>
     </div>
 
-    <h2 class="section-title">שיחות ותהליכים (בשידור חי)</h2>
-
-    <div class="services-stack">
-        <div class="service-card">
-            <h3>4. שיחת מיקוד (15 דקות)</h3>
-            <div class="highlight-box">
-                "יש רגעים שבהם את חייבת תשובה כאן ועכשיו. הדילמה בוערת, המחשבות רצות, ואת צריכה מישהי שתגיד לך את האמת בלי פילטרים."
-            </div>
-            <p>בשיחה של רבע שעה אנחנו מתמקדות בנקודה הכי כואבת או דחופה, ומקבלות החלטה מושכלת ומדויקת. זה העזרה הראשונה שלך לצמתים שבהם את לא רוצה לטעות.</p>
-            <span class="price-tag">מחיר: 144 ₪ | בתיאום מראש.</span>
-            <a href="https://wa.me/972535575236" class="gold-btn">אני רוצה את הבהירות הזו – להזמנה לחצי כאן</a>
+    <div class="service-card">
+        <h3>2. מפת התאמה זוגית</h3>
+        <div class="highlight-box">
+            "זוגיות היא לא רק רגש, היא מפגש בין שתי נשמות שלכל אחת מהן יש תדר ושיעור."
         </div>
+        <p>בדיקת החיבור האנרגטי, מה מעכב ומהו השיעור המשותף. קבלי את 'ספר ההדרכה' לקשר שלכם.</p>
+        <span class="price-tag">מחיר: 144 ₪ | זמן מענה: עד 3 ימי עסקים</span>
+        <a href="https://wa.me/972535575236" class="gold-btn">אני רוצה את הבהירות הזו – להזמנה לחצי כאן</a>
+    </div>
 
-        <div class="service-card" style="border-right-color: var(--gold); background-color: #fafafa;">
-            <h3>5. שיחת עומק וליווי (30 דקות)</h3>
-            <div class="highlight-box">
-                "יש תהליכים שאי אפשר לסכם בהודעה. בשיחת העומק אנחנו פותחות הכל – אני מתחברת לתדר שלך בתקשור חי וצוללת יחד איתך אל מתחת לפני השטח."
-            </div>
-            <p>זה הזמן שלך לפרוק, לשאול הכל ולקבל ליווי רגשי ואנרגטי צמוד. ב-30 דקות אנחנו ממיסות חסימות של שנים ובונות יחד את הגשר למקום שבו את רוצה להיות.</p>
-            <span class="price-tag">מחיר: 250 ₪ | בתיאום מראש.</span>
-            <a href="https://wa.me/972535575236" class="gold-btn">אני רוצה את הבהירות הזו – להזמנה לחצי כאן</a>
+    <div class="service-card">
+        <h3>3. מפה נומרולוגית אישית</h3>
+        <div class="highlight-box">
+            "לכל חודש בשנה יש תדר משלו – זמן לזרוע, זמן לקצור וזמן פשוט להמתין."
         </div>
+        <p>תוכנית עבודה אנרגטית לשנה שלמה שתעזור לך לפעול בסנכרון מושלם עם הגורל שלך.</p>
+        <span class="price-tag">מחיר: 222 ₪ | זמן מענה: עד 7 ימי עסקים</span>
+        <a href="https://wa.me/972535575236" class="gold-btn">אני רוצה את הבהירות הזו – להזמנה לחצי כאן</a>
+    </div>
+
+    <h2 class="section-title">שיחות וליווי (בשידור חי)</h2>
+
+    <div class="service-card">
+        <h3>4. שיחת מיקוד (15 דקות)</h3>
+        <p>מענה על שאלה בוערת או החלטה דחופה בצמתים שבהם את לא רוצה לטעות.</p>
+        <span class="price-tag">מחיר: 144 ₪ | בתיאום מראש</span>
+        <a href="https://wa.me/972535575236" class="gold-btn">לתיאום השיחה לחצי כאן</a>
+    </div>
+
+    <div class="service-card" style="border-right-color: var(--gold);">
+        <h3>5. שיחת עומק וליווי (30 דקות)</h3>
+        <div class="highlight-box">
+            "ב-30 דקות אנחנו ממיסות חסימות של שנים ובונות יחד את הגשר למקום שבו את רוצה להיות."
+        </div>
+        <p>תקשור חי, נומרולוגיה וצלילה אל מתחת לפני השטח. ליווי רגשי ואנרגטי צמוד.</p>
+        <span class="price-tag">מחיר: 250 ₪ | בתיאום מראש</span>
+        <a href="https://wa.me/972535575236" class="gold-btn">אני רוצה את הבהירות הזו – להזמנה לחצי כאן</a>
     </div>
 </div>
 
 <a href="https://wa.me/972535575236" class="whatsapp-float">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="35" alt="WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="30" alt="WhatsApp">
 </a>
 
 <footer>
-    <p>&copy; 2026 הודיה זכרי - הנדסת נשמה. כל הזכויות שמורות.</p>
+    &copy; 2026 הודיה זכרי - הנדסת נשמה. כל הזכויות שמורות.
 </footer>
 
 </body>
